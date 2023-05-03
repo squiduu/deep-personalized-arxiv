@@ -67,7 +67,6 @@ ITEM_PIPELINES = {
 }
 
 MONGO_URI = 'mongodb://arvixdb:27017/'
-# MONGO_URI = "mongodb+srv://Yuwon:cvpr0372@arxiv.dfyankd.mongodb.net/test"
 MONGO_DATABASE = 'arxiv'
 
 # Enable and configure the AutoThrottle extension (disabled by default)

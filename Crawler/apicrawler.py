@@ -8,8 +8,7 @@ from bs4 import BeautifulSoup
 from pymongo import MongoClient, UpdateMany
 
 crawl_date = datetime.now().date().isoformat()
-# db_uri = f"mongodb://arvixdb:27017/"
-db_uri = f"mongodb+srv://Yuwon:cvpr0372@arxiv.dfyankd.mongodb.net/test"
+db_uri = f"mongodb://arvixdb:27017/"
 client = MongoClient(db_uri)
 db = client['arxiv']
 collection = db['papers']

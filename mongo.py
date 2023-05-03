@@ -84,8 +84,7 @@ def main(db_uri, db_name, collection_name, json_path):
     print("Finished parsing papers")
 
 if __name__ == '__main__':
-    # db_uri = 'mongodb://arvixdb:27017/'
-    db_uri = "mongodb+srv://Yuwon:cvpr0372@arxiv.dfyankd.mongodb.net/test"
+    db_uri = 'mongodb://arvixdb:27017/'
     db_name = 'arxiv'
     collection_name = 'papers'
     json_path = './data/arxiv-metadata-oai-snapshot.json'
