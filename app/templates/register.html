@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register Page</title>
+    <script>
+      function submitForm() {
+        // This would normally be an AJAX call to your Flask API
+        // For simplicity, we're just submitting the form as usual and redirecting
+        document.getElementById("register").submit();
+        window.location.href = "/login";
+      }
+    </script>
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        text-align: center;
+      }
+
+      button {
+        margin: 0 auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <form
+      id="register"
+      action="/api/v1/users/register"
+      method="post"
+      onsubmit="event.preventDefault(); submitForm();"
+    >
+      <input
+        type="text"
+        id="userID"
+        name="userID"
+        placeholder="User ID"
+        required
+      /><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+        required
+      /><br />
+      <input type="submit" value="Register" />
+    </form>
+  </body>
+</html>

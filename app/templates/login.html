@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main Page</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      form {
+        text-align: center;
+      }
+
+      button {
+        margin: 0 auto;
+        display: block;
+      }
+    </style>
+    <script>
+      function submitForm() {
+        // This would normally be an AJAX call to your Flask API
+        // For simplicity, we're just submitting the form as usual and redirecting
+        document.getElementById("login").submit();
+        window.location.href = "/main";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>ArxiBing</h1>
+
+    <form id="login" action="/api/v1/login" method="post">
+      <h2>Login</h2>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Username"
+      /><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+      /><br />
+      <input type="submit" value="Login" />
+    </form>
+    <!-- <a href="/register" class="button">Register</a> -->
+    <button onclick="location.href='/register'">Register</button>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Page</title>
+    <style>
+      #results {
+        max-height: 300px;
+        overflow-y: auto;
+        border: 1px solid #000;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Search Page</h1>
+
+    <form id="search" action="/api/v1/papers/search" method="get">
+      <input type="text" id="search-box" name="query" placeholder="Search..." />
+
+      <label for="category1">Category 1:</label>
+      <select id="category1" name="category1">
+        <option value="">--Please choose an option--</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+
+      <label for="category2">Category 2:</label>
+      <select id="category2" name="category2">
+        <option value="">--Please choose an option--</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+
+      <input type="submit" value="Search" />
+    </form>
+
+    <div id="results">
+      <!-- Results will be displayed here -->
+    </div>
+  </body>
+</html>

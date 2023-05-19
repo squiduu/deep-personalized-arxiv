@@ -1,2 +1,9 @@
+# large or testing files
 *.ipynb
+*.pkl
+
+# Directories not needed
+.vscode
 /data
+/vue
+__pycache__
